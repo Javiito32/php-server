@@ -1,5 +1,5 @@
 <?php
-$servername = "10.5.0.20";
+$servername = "10.5.0.20"; //Don't change this unless you know exactly what you're doing, it's the docker's network address of database
 $username = "root";
 $password = "contrasenya";
 
