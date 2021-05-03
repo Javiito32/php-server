@@ -1,0 +1,29 @@
+version: "3.3"  # optional since v1.27.0
+services:
+    php:
+        build: ./php
+        ports:
+            - "80:80"
+        volumes:
+            - ./www:/var/www/html
+        links:
+            - database
+        networks:
+            php_server_network:
+                ipv4_address: 10.5.0.10
+    database: 
+        image: mysql
+        environment: 
+            - MYSQL_ROOT_PASSWORD=contrasenya
+            - MYSQL_DATABASE=mainDB
+        ports:
+            - "3306:3306"
+        networks:
+            php_server_network:
+                ipv4_address: 10.5.0.20
+networks:
+    php_server_network:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 10.5.0.0/16
