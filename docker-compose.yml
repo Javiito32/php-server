@@ -16,6 +16,8 @@ services:
         environment: 
             - MYSQL_ROOT_PASSWORD=contrasenya
             - MYSQL_DATABASE=mainDB
+        volumes: 
+            - ./mysql:/var/lib/mysql
         ports:
             - "3306:3306"
         networks:
