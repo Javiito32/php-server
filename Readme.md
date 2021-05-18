@@ -35,7 +35,7 @@ _After the installation you can start and stop it with ```docker-compose start``
 ### Complete Deletion 🗑️
 _Use ```docker-compose down``` to remove the php server, mysql server, and docker network's_
 
-⚠️ The use of this command to stop it and then start it back with ```docker-compose u``` is not recommended, check ***Start ✔️ and Stop 🛑*** instead_
+⚠️ _The use of this command to stop it and then start it back with ```docker-compose up``` is not recommended, check ***Start ✔️ and Stop 🛑*** instead_
 
 ✔️ This won't remove the workdir [www](www) or the data of the database [mysql](mysql).
 
