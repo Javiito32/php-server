@@ -13,3 +13,6 @@
     Hola Mundo
 </body>
 </html>
+<?php
+    include_once('connection/close_connection.php');
+?>
